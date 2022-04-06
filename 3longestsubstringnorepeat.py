@@ -4,6 +4,9 @@ class Solution:
         longestSubstring = ""
         currentSubstring = ""
 
+        if len(s) == 1:
+            return 1
+
         for firstLetter in range(len(s)):
             if len(currentSubstring) > len(longestSubstring):
                 longestSubstring = currentSubstring
