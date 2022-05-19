@@ -1,4 +1,3 @@
-
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         longestSubstring = ""
@@ -12,7 +11,7 @@ class Solution:
                 longestSubstring = currentSubstring
                 currentSubstring = ""
             currentSubstring = s[firstLetter]
-            for y in range(firstLetter+1,len(s)):
+            for y in range(firstLetter + 1, len(s)):
                 if s[y] not in currentSubstring:
                     currentSubstring += s[y]
                 else:
@@ -21,8 +20,8 @@ class Solution:
         return len(longestSubstring)
 
 
-print(Solution.lengthOfLongestSubstring(Solution,"abcabcbb"))
-print(Solution.lengthOfLongestSubstring(Solution,"bbbbb"))
-print(Solution.lengthOfLongestSubstring(Solution,"pwwkew"))
-print(Solution.lengthOfLongestSubstring(Solution," "))
-print(Solution.lengthOfLongestSubstring(Solution,"au"))
+print(Solution.lengthOfLongestSubstring(Solution, "abcabcbb"))
+print(Solution.lengthOfLongestSubstring(Solution, "bbbbb"))
+print(Solution.lengthOfLongestSubstring(Solution, "pwwkew"))
+print(Solution.lengthOfLongestSubstring(Solution, " "))
+print(Solution.lengthOfLongestSubstring(Solution, "au"))
